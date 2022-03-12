@@ -1,0 +1,46 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+:root {
+    --primary-blue: #3EA4DC;
+    --primary-green: #3EDC95;
+    --theme-gradient-down: linear-gradient(#3EA4DC, #3EDC95);
+    --theme-gradient-right: linear-gradient(to right, #3EA4DC, #3EDC95);
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+input {
+    border: 2px solid;
+    border-radius: .7rem;
+    border-color: #3EA4DC;
+}
+
+.btn {
+    cursor: pointer;
+    color: white;
+    background: var(--theme-gradient-right);
+    border: none;
+    border-radius: .7rem;
+    font-size: 1rem;
+    padding: .7rem 1.3rem;
+    transition: 100ms;
+}
+
+.btn:active {
+    transform: scale(.9);
+}

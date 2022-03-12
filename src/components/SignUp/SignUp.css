@@ -1,0 +1,69 @@
+.signup {
+    display: flex;
+    height: 100vh;
+}
+
+/* Intro */
+.intro {
+    background: var(--theme-gradient-down);
+    text-align: center;
+    flex: 1;
+}
+
+.logo {
+    margin-top: 7rem;
+    font-size: 5rem;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    color: white;
+    width: 70%;
+    margin: 3rem auto;
+}
+
+.left-img {
+    margin-top: 2rem;
+    height: 350px;
+}
+
+.input-item {
+    text-align: center;
+}
+
+.input-item + .input-item {
+    margin-top: 5rem;
+}
+
+input {
+    padding: .8rem .5rem;
+    width: 50%;
+}
+
+.date {
+    padding: 2rem;
+}
+/* Form */
+.right {
+    flex: 1;
+}
+
+form {
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+}
+
+form h1 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    text-align: center;
+    margin: 7rem 0 5rem 0;
+}
+
+button {
+    margin-top: 1rem;
+    position: absolute;
+    right: 12rem;
+}
