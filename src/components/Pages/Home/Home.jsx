@@ -4,9 +4,12 @@ import {FiHome} from 'react-icons/fi'
 import {FiMail} from 'react-icons/fi'
 import {FiBell} from 'react-icons/fi'
 import DefaultPfp from '../../../assets/default-pfp.jpg'
+import Stories from '../../Stories/Stories'
 
 const Home = () => {
   return (
+    <>
+    <Stories/>
     <div className="home">
 
       <div className="dashboard">
@@ -30,6 +33,7 @@ const Home = () => {
         right
       </div>
     </div>
+    </>
   )
 }
 

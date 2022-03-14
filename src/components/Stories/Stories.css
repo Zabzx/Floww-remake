@@ -1,0 +1,38 @@
+.stories {
+    display: flex;
+    gap: 5rem;
+}
+
+img {
+    width: 5rem;
+    border-radius: 1rem;
+    transition: 300ms ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.story-item {
+    position: relative;
+}
+
+.story-item p {
+    position: absolute;
+    top: 6rem;
+    left: .4rem;
+    color: white;
+}
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(transparent, black);
+    transition: .2s;
+}
+
+.cover:hover {
+    transform: scale(0);
+}
