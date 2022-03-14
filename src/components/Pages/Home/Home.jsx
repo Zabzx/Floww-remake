@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import './Home.css'
 import {FiHome} from 'react-icons/fi'
 import {FiMail} from 'react-icons/fi'
@@ -7,9 +8,14 @@ import DefaultPfp from '../../../assets/default-pfp.jpg'
 import Stories from '../../Stories/Stories'
 
 const Home = () => {
+
+  const [postInputValue, setPostInputValue] = useState('')
+
+  const uploadPost = (e) => {
+    e.preventDefault()
+  }
   return (
     <>
-    <Stories/>
     <div className="home">
 
       <div className="dashboard">
@@ -26,7 +32,12 @@ const Home = () => {
       </div>
 
       <div className="main">
-        main
+        <Stories/>
+
+        <form action="" className='form-active post-form'>
+          <input type="text" name='post' className='post-input' placeholder="What's on your mind?" onChange={(e) => setPostInputValue(e.target.value)} />
+          <button className='btn' onClick={(e) => uploadPost(e)}>Post</button>
+        </form>
       </div>
 
       <div className="right">

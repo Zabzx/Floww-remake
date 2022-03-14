@@ -3,13 +3,13 @@
     gap: 5rem;
 }
 
-.story-img {
+.story-item img {
     width: 5rem;
     border-radius: 1rem;
     transition: 300ms ease;
 }
 
-.story-img:hover {
+.story-item img:hover {
     transform: scale(1.1);
 }
 

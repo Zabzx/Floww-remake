@@ -4,6 +4,7 @@ body {
 
 .home {
     display: flex;
+    gap: 2rem;
 }
 .dashboard {
     width: 20%;
@@ -110,4 +111,25 @@ body {
 .profile-link h2 {
     margin-top: -8px;
     color: white;
+}
+
+/* Post Input */
+.main {
+    flex: 1;
+}
+
+.post-form {
+    position: relative;
+}
+
+.post-form button {
+    position: absolute;
+    top: 4.2rem;
+    right: 10rem;
+}
+
+.post-input {
+    width: 80%;
+    margin-top: 5rem;
+    height: 3rem;
 }

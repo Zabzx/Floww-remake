@@ -76,7 +76,7 @@ const previous = (e) => {
             <img src={SignUpImage} className="left-img" alt="Interaction" />
         </div>
 
-        <form action="" className={ formIndex === 0 ? `form-active right` : ''}>
+        <form action="" className={ formIndex === 0 ? `form-active right` : 'sign-in-form'}>
             <h1>Floww Sign Up</h1>
 
             <div className='input-item'>
@@ -94,7 +94,7 @@ const previous = (e) => {
             <button className="btn" onClick={(e) => slideForm(e)}>Next</button>
         </form>
 
-        <form action="" className={ formIndex === 1 ? `form-active right` : ''}>
+        <form action="" className={ formIndex === 1 ? `form-active right` : 'sign-in-form'}>
             <h1>Floww Sign Up</h1>
 
             <div className='input-item'>

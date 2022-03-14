@@ -33,6 +33,7 @@ body {
 .left-img {
     margin-top: 2rem;
     height: 350px;
+    width: 100%;
 }
 
 .input-item {
@@ -56,7 +57,7 @@ input {
     flex: 1;
 }
 
-form {
+.sign-in-form {
     width: 30%;
     margin: 0 auto;
     position: relative;
