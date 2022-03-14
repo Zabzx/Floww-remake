@@ -7,7 +7,7 @@ body {
 }
 .dashboard {
     width: 20%;
-    height: 100vh;
+    height: 90vh;
     background-color: white;
 }
 
@@ -27,6 +27,10 @@ body {
     font-size: 1.2rem;
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
 .dashboard li::after {
@@ -44,11 +48,41 @@ body {
     height: 100%;
 }
 
+.notif::before {
+    content: '3';
+    position: absolute;
+    border-radius: 100%;
+    background-color: var(--primary-green);
+    color: white;
+    left: 4rem;
+    height: 20px;
+    width: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.msg::before {
+    content: '1';
+    position: absolute;
+    border-radius: 100%;
+    background-color: var(--primary-green);
+    color: white;
+    left: 4rem;
+    height: 20px;
+    width: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
 .dashboard-options {
     height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.dashboard-icon {
+    font-size: 2rem;
 }
 
 .profile-link {

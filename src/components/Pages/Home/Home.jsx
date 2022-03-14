@@ -1,5 +1,8 @@
 import React from 'react'
 import './Home.css'
+import {FiHome} from 'react-icons/fi'
+import {FiMail} from 'react-icons/fi'
+import {FiBell} from 'react-icons/fi'
 import DefaultPfp from '../../../assets/default-pfp.jpg'
 
 const Home = () => {
@@ -9,9 +12,9 @@ const Home = () => {
       <div className="dashboard">
         <h1>Dashboard</h1>
         <ul className="dashboard-options">
-          <li className='dashboard-active'>Home</li>
-          <li>Notifications</li>
-          <li>Messages</li>
+          <li className='dashboard-active'><FiHome className='dashboard-icon'/>Home</li>
+          <li className='notif'> <FiBell className='dashboard-icon'/> Notifications</li>
+          <li className='msg'><FiMail className='dashboard-icon'/> Messages</li>
         </ul>
         <div className="profile-link">
           <div className="circle"></div>
