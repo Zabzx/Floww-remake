@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import './SignUp.css'
 import {SiDialogflow} from 'react-icons/si'
 import SignUpImage from '../../assets/SignUpImage.svg'
@@ -35,10 +36,23 @@ const previous = (e) => {
  const [userPassword, setUserPassword] = useState('')
  const [userConfirmedPassword, setUserConfirmedPassword] = useState('')
 
+ let navigate = useNavigate()
+
  const submit = (e) => {
     e.preventDefault();
+
+    if (userUsername === '') {
+        alert('Please enter a username.')
+        return;
+    }
+
     if (userUsername.length < 3) {
         alert('Username too short.')
+        return;
+    }
+
+    if (userPassword ===  '') {
+        alert('Enter a password.')
         return;
     }
 
@@ -50,6 +64,8 @@ const previous = (e) => {
     if (userPassword !== userConfirmedPassword) {
         alert(`Passwords don't match.`)
     }
+
+    navigate('/home')
 }
 
   return (
