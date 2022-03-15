@@ -1,0 +1,51 @@
+.posts {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+.user-pfp {
+    height: 50px;
+    width: 50px;
+}
+.post-img {
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.post-date {
+    margin-top: .5rem;
+    color: #5a5a5a;
+}
+
+.post-content {
+    margin-top: .8rem;
+}
+
+.post-interact {
+    margin-top: .6rem;
+    display: flex;
+    gap: 4rem;
+    font-size: 2rem;
+}
+
+.bookmark {
+    margin-left: 29rem;
+}

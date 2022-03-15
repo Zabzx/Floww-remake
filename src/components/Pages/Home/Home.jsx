@@ -6,6 +6,7 @@ import {FiMail} from 'react-icons/fi'
 import {FiBell} from 'react-icons/fi'
 import DefaultPfp from '../../../assets/default-pfp.jpg'
 import Stories from '../../Stories/Stories'
+import Posts from '../../Posts/Posts'
 
 const Home = () => {
 
@@ -38,6 +39,8 @@ const Home = () => {
           <input type="text" name='post' className='post-input' placeholder="What's on your mind?" onChange={(e) => setPostInputValue(e.target.value)} />
           <button className='btn' onClick={(e) => uploadPost(e)}>Post</button>
         </form>
+
+        <Posts/>
       </div>
 
       <div className="right">

@@ -125,11 +125,12 @@ body {
 .post-form button {
     position: absolute;
     top: 4.2rem;
-    right: 10rem;
+    right: 9.2rem;
 }
 
 .post-input {
     width: 80%;
     margin-top: 5rem;
     height: 3rem;
+    border: none;
 }
