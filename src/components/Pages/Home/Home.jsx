@@ -46,7 +46,18 @@ const Home = () => {
       </div>
 
       <div className="right">
-        right
+        <div className="trending">
+          <h1>Trending Topics</h1>
+          <ul>
+            <li>#Movies</li>
+            <li>#Video Games</li>
+            <li>#Anime</li>
+            <li>#Food</li>
+            <li>#Technology</li>
+            <li>#Fitness</li>
+            <li>#Music</li>
+          </ul>
+        </div>
       </div>
     </div>
     </>

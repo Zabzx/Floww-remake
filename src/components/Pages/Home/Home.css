@@ -118,7 +118,7 @@ body {
 /* Post Input */
 .main {
     flex: 1;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .post-form {
@@ -136,4 +136,40 @@ body {
     margin-top: 5rem;
     height: 3rem;
     border: none;
+}
+
+/* Trending */
+.trending {
+    height: 100vh;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    overflow-y: scroll;
+}
+
+.trending h1 {
+    text-align: center;
+    background: var(--theme-gradient-right);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 2rem;
+}
+
+.trending ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.trending ul li {
+    padding: 2rem 1rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.trending ul li:hover {
+    background-color: #F4F4F4;
 }
