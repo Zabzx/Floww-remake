@@ -5,48 +5,55 @@ import { FaRegComment } from 'react-icons/fa'
 import SETUP from '../../assets/setup.jpg'
 import DefaultPfp from '../../assets/default-pfp.jpg'
 
+//Post Images
+import STRAWBERRIES from '../../assets/strawberries.jpg'
+import BMW from '../../assets/bmw.jpg'
+import FLOWERS from '../../assets/flowers.jpg'
+import TABLET from '../../assets/tablet.jpg'
+import SNOW from '../../assets/snow.jpg'
+
 const Posts = () => {
 
   const [posts, setPosts] = useState([
       {
           id: 1,
           pfp: DefaultPfp,
-          name: 'Natalie Williams',
-          img: SETUP,
+          name: 'Natalie Piquette',
+          img: STRAWBERRIES,
           date: '3 minutes ago',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab aperiam error aliquam consectetur ipsam harum eligendi perspiciatis, quae nulla.'
+          content: 'Starting the morning off with yummy strawberries.😋🍓'
       },
       {
         id: 2,
         pfp: DefaultPfp,
-        name: 'Natalie Williams',
-        img: SETUP,
-        date: '3 minutes ago',
-        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab aperiam error aliquam consectetur ipsam harum eligendi perspiciatis, quae nulla.'
+        name: 'Joshua Rhode',
+        img: BMW,
+        date: '23 minutes ago',
+        content: "Took her on a joyride today, she's as beautiful as the day I met her."
       },
       {
         id: 3,
         pfp: DefaultPfp,
-        name: 'Natalie Williams',
-        img: SETUP,
-        date: '3 minutes ago',
-        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab aperiam error aliquam consectetur ipsam harum eligendi perspiciatis, quae nulla.'
+        name: 'Hana Orihime',
+        img: FLOWERS,
+        date: '8 minutes ago',
+        content: "Getting better at photographt 🥺💜 absolutely love this shot!"
       },
       {
         id: 4,
         pfp: DefaultPfp,
-        name: 'Natalie Williams',
-        img: SETUP,
-        date: '3 minutes ago',
-        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab aperiam error aliquam consectetur ipsam harum eligendi perspiciatis, quae nulla.'
+        name: 'Michael Cole',
+        img: TABLET,
+        date: '30 minutes ago',
+        content: 'Relaxing on the weekend.'
       },
       {
         id: 5,
         pfp: DefaultPfp,
-        name: 'Natalie Williams',
-        img: SETUP,
-        date: '3 minutes ago',
-        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab aperiam error aliquam consectetur ipsam harum eligendi perspiciatis, quae nulla.'
+        name: 'Zach',
+        img: SNOW,
+        date: '2 minutes ago',
+        content: 'Take me back ⛷🏔⛄ I missed this place so much!'
       }
   ]);
 

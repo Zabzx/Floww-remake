@@ -1,0 +1,10 @@
+header {
+    height: 5.5rem;
+    text-align: center;
+    background: var(--theme-gradient-right);
+}
+
+header h1 {
+    padding-top: 1.5rem;
+    color: white;
+}

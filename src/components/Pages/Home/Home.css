@@ -8,8 +8,10 @@ body {
 }
 .dashboard {
     width: 20%;
-    height: 90vh;
+    height: 100vh;
     background-color: white;
+    position: sticky;
+    top: 0;
 }
 
 .dashboard h1 {
@@ -116,6 +118,7 @@ body {
 /* Post Input */
 .main {
     flex: 1;
+    margin-top: 4rem;
 }
 
 .post-form {

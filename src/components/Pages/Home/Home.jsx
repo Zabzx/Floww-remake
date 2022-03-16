@@ -7,6 +7,7 @@ import {FiBell} from 'react-icons/fi'
 import DefaultPfp from '../../../assets/default-pfp.jpg'
 import Stories from '../../Stories/Stories'
 import Posts from '../../Posts/Posts'
+import Nav from '../../Navigation/Nav'
 
 const Home = () => {
 
@@ -17,8 +18,9 @@ const Home = () => {
   }
   return (
     <>
+    <Nav/>
     <div className="home">
-
+      
       <div className="dashboard">
         <h1>Dashboard</h1>
         <ul className="dashboard-options">
