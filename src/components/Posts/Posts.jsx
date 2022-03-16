@@ -20,6 +20,19 @@ import SNOW from '../../assets/snow.jpg'
 
 const Posts = () => {
 
+  const [postInputValue, setPostInputValue] = useState('')
+
+  const uploadPost = (e) => {
+    e.preventDefault()
+
+    let value = postInputValue;
+
+    setPosts([{content: value, pfp: DefaultPfp, name: 'zabz'}, ...posts])
+
+    e.target.value = ''
+
+  }
+
   const [posts, setPosts] = useState([
       {
           id: 1,
@@ -66,9 +79,14 @@ const Posts = () => {
   return (
     <div className="posts">
 
+        <form action="" className='form-active post-form'>
+          <input type="text" name='post' className='post-input' placeholder="What's on your mind?" onChange={(e) => setPostInputValue(e.target.value)} />
+          <button className='btn' onClick={(e) => uploadPost(e)}>Post</button>
+        </form>
+
     {posts.map((post) => {
         return (
-            <div className='post' id={post.id}>
+            <div className='post' key={post.id}>
         <div className="post-header">
           <div className="user-pfp">
             <img src={post.pfp} alt="" />
