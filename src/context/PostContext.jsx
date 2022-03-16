@@ -60,8 +60,8 @@ export const PostProvider = (props) => {
     ]);
 
     return (
-        <PostContext.Consumer>
+        <PostContext.Provider value={[posts, setPosts]}>
             {props.children}
-        </PostContext.Consumer>
+        </PostContext.Provider>
     )
 }

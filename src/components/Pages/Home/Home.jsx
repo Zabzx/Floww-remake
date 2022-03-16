@@ -19,10 +19,22 @@ const Home = () => {
       <div className="dashboard">
         <h1>Dashboard</h1>
         <ul className="dashboard-options">
-          <li className='dashboard-active'><FiHome className='dashboard-icon'/>Home</li>
-          <li className='notif'> <FiBell className='dashboard-icon'/> Notifications</li>
-          <li className='msg'><FiMail className='dashboard-icon'/> Messages</li>
+          <div>
+          <FiHome className='dashboard-icon'/>
+          <li className='dashboard-active'>Home</li>
+          </div>
+
+          <div className='notif'>
+          <FiBell className='dashboard-icon'/>
+          <li className='dashboard-active'>Notifications</li>
+          </div>
+
+          <div className='msg'>
+          <FiMail className='dashboard-icon'/>
+          <li className='dashboard-active'>Messages</li>
+          </div>
         </ul>
+
         <div className="profile-link">
           <div className="circle"></div>
           <h2>Profile</h2>

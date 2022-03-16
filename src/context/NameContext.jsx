@@ -14,7 +14,7 @@ export const NameProvider = (props) => {
     );
 
     return (
-        <NameContext.Provider>
+        <NameContext.Provider value={[names, setNames]}>
             {props.children}
         </NameContext.Provider>
     )

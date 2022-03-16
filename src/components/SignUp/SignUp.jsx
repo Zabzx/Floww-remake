@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
 import './SignUp.css'
+import { NameContext } from '../../context/NameContext'
 import {SiDialogflow} from 'react-icons/si'
 import SignUpImage from '../../assets/SignUpImage.svg'
 
@@ -68,6 +69,9 @@ const previous = (e) => {
     navigate('/home')
 }
 
+//Context
+const [names, setNames] = useContext(NameContext)
+
   return (
     <div className="signup">
         <div className="intro">
@@ -80,11 +84,13 @@ const previous = (e) => {
             <h1>Floww Sign Up</h1>
 
             <div className='input-item'>
-                <input type="text" name="firstname" placeholder="First Name" onChange={(e) => setUserFirstName(e.target.value)} />
+                <input type="text" name="firstname" placeholder="First Name" onChange={(e) => {setUserFirstName(e.target.value)
+                setNames({...names, firstname: e.target.value})}} />
             </div>
 
             <div className='input-item'>
-                <input type="text" name="lastname" placeholder="Last Name" onChange={(e) => setUserLastName(e.target.value)} />
+                <input type="text" name="lastname" placeholder="Last Name" onChange={(e) => {setUserLastName(e.target.value)
+                setNames({...names, lastname: e.target.value})}} />
             </div>
 
             <div className='input-item'>
@@ -98,7 +104,8 @@ const previous = (e) => {
             <h1>Floww Sign Up</h1>
 
             <div className='input-item'>
-                <input type="text" name="firstname" placeholder="Username" onChange={(e) => setUserUsername(e.target.value)} />
+                <input type="text" name="username" placeholder="Username" onChange={(e) => {setUserUsername(e.target.value)
+                setNames({...names, username: e.target.value})}} />
             </div>
 
             <div className='input-item'>

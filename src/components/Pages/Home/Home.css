@@ -57,7 +57,7 @@ body {
     border-radius: 100%;
     background-color: var(--primary-green);
     color: white;
-    left: 4rem;
+    left: 2rem;
     height: 20px;
     width: 20px;
     font-size: 1rem;
@@ -82,6 +82,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: flex-end;
+}
+
+.dashboard-options div {
+    display: flex;
+    align-items: center;
 }
 
 .dashboard-icon {
@@ -139,6 +145,9 @@ body {
 }
 
 /* Trending */
+.right {
+    flex: 0.6;
+}
 .trending {
     height: 100vh;
     background-color: white;
@@ -159,7 +168,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100%;
 }
 
@@ -172,4 +181,40 @@ body {
 
 .trending ul li:hover {
     background-color: #F4F4F4;
+}
+
+/* Respnsive design for tablets */
+@media only screen and (max-width: 1024px) {
+    .dashboard {
+        width: 30%;
+    }
+    .dashboard h1 {
+        font-size: 1.1rem;
+    }
+    .dashboard-options {
+        align-items: center;
+    }
+    .dashboard-options div li {
+        display: none;
+    }
+    .msg::before {
+        left: 2rem;
+    }
+
+    .circle {
+        display: none;
+    }
+    .profile-link {
+        width: 10rem;
+    }
+    .profile-link h2 {
+        font-size: 1.1rem;
+    }
+
+    .main {
+        width: 50%;
+    }
+    .right {
+        display: none;
+    }
 }
