@@ -5,6 +5,12 @@ import { FaRegComment } from 'react-icons/fa'
 import SETUP from '../../assets/setup.jpg'
 import DefaultPfp from '../../assets/default-pfp.jpg'
 
+//Pfp Images
+import NATALIE from '../../assets/natalie-pfp.jpg'
+import JOSHUA from '../../assets/joshua-pfp.jpg'
+import HANA from '../../assets/hana-pfp.jpg'
+import MICHAEL from '../../assets/michael-pfp.jpg'
+import ZACH from '../../assets/zach-pfp.jpg'
 //Post Images
 import STRAWBERRIES from '../../assets/strawberries.jpg'
 import BMW from '../../assets/bmw.jpg'
@@ -17,7 +23,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([
       {
           id: 1,
-          pfp: DefaultPfp,
+          pfp: NATALIE,
           name: 'Natalie Piquette',
           img: STRAWBERRIES,
           date: '3 minutes ago',
@@ -25,7 +31,7 @@ const Posts = () => {
       },
       {
         id: 2,
-        pfp: DefaultPfp,
+        pfp: JOSHUA,
         name: 'Joshua Rhode',
         img: BMW,
         date: '23 minutes ago',
@@ -33,7 +39,7 @@ const Posts = () => {
       },
       {
         id: 3,
-        pfp: DefaultPfp,
+        pfp: HANA,
         name: 'Hana Orihime',
         img: FLOWERS,
         date: '8 minutes ago',
@@ -41,7 +47,7 @@ const Posts = () => {
       },
       {
         id: 4,
-        pfp: DefaultPfp,
+        pfp: MICHAEL,
         name: 'Michael Cole',
         img: TABLET,
         date: '30 minutes ago',
@@ -49,7 +55,7 @@ const Posts = () => {
       },
       {
         id: 5,
-        pfp: DefaultPfp,
+        pfp: ZACH,
         name: 'Zach',
         img: SNOW,
         date: '2 minutes ago',
@@ -64,7 +70,9 @@ const Posts = () => {
         return (
             <div className='post' id={post.id}>
         <div className="post-header">
-            <img src={post.pfp} alt="" className="user-pfp" />
+          <div className="user-pfp">
+            <img src={post.pfp} alt="" />
+            </div>
             <h1 className="user-name">{post.name}</h1>
         </div>
         <img className='post-img' src={post.img} alt="" />

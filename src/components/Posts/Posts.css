@@ -19,10 +19,13 @@
     color: var(--primary-blue);
 }
 
-.user-pfp {
-    height: 50px;
-    width: 50px;
+.post-header img {
+    height: 75px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 100%;
 }
+
 .post-img {
     border-radius: 1rem;
     height: 100%;
