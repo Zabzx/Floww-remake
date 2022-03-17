@@ -1,13 +1,21 @@
 import './Nav.css'
-
-import React from 'react'
+import React, {useContext} from 'react'
+import { ResponsiveContext } from '../../context/ResponsioveContext'
 
 const Nav = () => {
+
+  const [responsiveContext, setResponsiveContext] = useContext(ResponsiveContext)
+
+  const openTrending = () => {
+    setResponsiveContext({...responsiveContext, trending: !responsiveContext.trending})
+    console.log('hrer')
+  }
+
   return (
     <header>
         <h1>Floww</h1>
 
-        <div className="menu">
+        <div className="menu" onClick={openTrending}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>

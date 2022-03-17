@@ -15,6 +15,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     background-color: white;
+    overflow-x: hidden;
 }
 
 img {

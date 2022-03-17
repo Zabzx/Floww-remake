@@ -1,16 +1,16 @@
-import React from 'react'
-import { useState } from 'react'
+import React, {useContext} from 'react'
+import { ResponsiveContext } from '../../../context/ResponsioveContext'
 import './Home.css'
-import { PostProvider } from '../../../context/PostContext'
 import {FiHome} from 'react-icons/fi'
 import {FiMail} from 'react-icons/fi'
 import {FiBell} from 'react-icons/fi'
-import DefaultPfp from '../../../assets/default-pfp.jpg'
 import Stories from '../../Stories/Stories'
 import Posts from '../../Posts/Posts'
 import Nav from '../../Navigation/Nav'
 
 const Home = () => {
+
+  const [responsiveContext, setResponsiveConext] = useContext(ResponsiveContext)
   return (
     <>
     <Nav/>
@@ -47,7 +47,7 @@ const Home = () => {
       </div>
 
       <div className="right">
-        <div className="trending">
+        <div className=  {responsiveContext.trending ? "trending-active trending" : 'trending'}>
           <h1>Trending Topics</h1>
           <ul>
             <li>#Movies</li>

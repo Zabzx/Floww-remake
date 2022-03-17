@@ -160,6 +160,7 @@ body {
     position: sticky;
     top: 0;
     overflow-y: scroll;
+    transition: 300ms ease;
 }
 
 .trending h1 {
@@ -217,7 +218,10 @@ body {
     .main {
         width: 50%;
     }
-    .right {
-        display: none;
+    .trending {
+        transform: translateX(100%);
+    }
+    .trending-active {
+        transform: translateX(0%);
     }
 }
