@@ -51,26 +51,32 @@ body {
     height: 100%;
 }
 
+.notif {
+    position: relative;
+}
 .notif::before {
     content: '3';
     position: absolute;
     border-radius: 100%;
     background-color: var(--primary-green);
     color: white;
-    left: 2rem;
+    left: -2rem;
     height: 20px;
     width: 20px;
     font-size: 1rem;
     text-align: center;
 }
 
+.msg {
+    position: relative;
+}
 .msg::before {
     content: '1';
     position: absolute;
     border-radius: 100%;
     background-color: var(--primary-green);
     color: white;
-    left: 4rem;
+    left: -2rem;
     height: 20px;
     width: 20px;
     font-size: 1rem;
@@ -196,9 +202,6 @@ body {
     }
     .dashboard-options div li {
         display: none;
-    }
-    .msg::before {
-        left: 2rem;
     }
 
     .circle {
