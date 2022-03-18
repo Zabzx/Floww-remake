@@ -45,3 +45,9 @@
         gap: 1rem;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .stories {
+        justify-content: center;
+    }
+}

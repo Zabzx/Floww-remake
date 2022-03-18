@@ -225,3 +225,51 @@ body {
         transform: translateX(0%);
     }
 }
+
+@media only screen and (max-width: 600px) {
+
+    /* Post Mobile */
+    .post-form button {
+        right: 7rem;
+    }
+    .dashboard {
+        width: 100%;
+        position: fixed;
+        height: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 85%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6rem;
+        border-radius: 50px;
+    }
+    .dashboard h1 {
+        display: none;
+    }
+    .dashboard-options {
+        flex-direction: row;
+        gap: 2rem;
+        padding-left: 2rem;
+    }
+
+    .profile-link {
+        border-radius: 100%;
+        height: 75px;
+        width: 75px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    /* Trending */
+    .trending {
+        transform: translateX(100%);
+    }
+    .trending-active {
+        transform: translateX(-110%);
+    }
+}
