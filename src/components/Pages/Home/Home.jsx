@@ -7,6 +7,8 @@ import {FiBell} from 'react-icons/fi'
 import Stories from '../../Stories/Stories'
 import Posts from '../../Posts/Posts'
 import Nav from '../../Navigation/Nav'
+import { Link } from 'react-router-dom';
+import Profile from '../Profile/Profile'
 
 const Home = () => {
 
@@ -35,10 +37,12 @@ const Home = () => {
           </div>
         </ul>
 
+        <Link to={'/profile'}>
         <div className="profile-link">
           <div className="circle"></div>
           <h2>Profile</h2>
         </div>
+        </Link>
       </div>
 
       <div className="main">
