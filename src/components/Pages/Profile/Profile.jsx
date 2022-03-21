@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './Profile.css'
 
 const Profile = () => {
     
@@ -23,7 +24,9 @@ const Profile = () => {
         const file = e.target.files[0]
         setUserImage(file)
         }}/>
+        <div className="user-img-container">
         <img src={loadedUserImage} alt="" />
+        </div>
     </div>
   )
 }
