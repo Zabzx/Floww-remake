@@ -2,9 +2,9 @@ import React, {useState, useContext} from 'react'
 import './Posts.css'
 import { PostContext } from '../../context/PostContext'
 import { NameContext } from '../../context/NameContext'
+import { PfpContext } from '../../context/PfpContext'
 import { BsHeart, BsBookmarkCheck } from 'react-icons/bs'
 import { FaRegComment } from 'react-icons/fa'
-import SETUP from '../../assets/setup.jpg'
 import DefaultPfp from '../../assets/default-pfp.jpg'
 
 const Posts = () => {
@@ -12,6 +12,7 @@ const Posts = () => {
   const [postInputValue, setPostInputValue] = useState('')
   const [postReady, setPostReady] = useState(false)
   const [names, setNames] = useContext(NameContext);
+  const [userPfp, setUserPfp] = useContext(PfpContext)
 
   const postValid = (e) => {
     if (e.target.value !== '') {
@@ -30,7 +31,11 @@ const Posts = () => {
       return;
     }
 
+    if (!userPfp) {
     setPosts([{content: value, pfp: DefaultPfp, name: names.username}, ...posts])
+    } else {
+      setPosts([{content: value, pfp: userPfp, name: names.username}, ...posts])
+    }
 
     e.target.value = ''
 

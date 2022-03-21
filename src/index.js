@@ -8,12 +8,14 @@ import Home from './components/Pages/Home/Home';
 import { PostProvider } from './context/PostContext';
 import { ResponsiveContextProvider } from './context/ResponsioveContext';
 import Profile from './components/Pages/Profile/Profile';
+import { PfpProvider } from './context/PfpContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <NameProvider>
     <PostProvider>
     <ResponsiveContextProvider>
+    <PfpProvider>
     <BrowserRouter>
     <Routes>
     <Route path='/' element={<App />}/>
@@ -21,6 +23,7 @@ ReactDOM.render(
     <Route path='/profile' element={<Profile />}/>
     </Routes>
     </BrowserRouter>
+    </PfpProvider>
     </ResponsiveContextProvider>
     </PostProvider>
     </NameProvider>
