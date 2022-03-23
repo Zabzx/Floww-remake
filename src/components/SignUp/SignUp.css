@@ -71,7 +71,7 @@ form h1 {
     margin: 7rem 0 5rem 0;
 }
 
-button {
+.s-btn {
     margin-top: 1rem;
     position: absolute;
     right: 12rem;
@@ -79,4 +79,35 @@ button {
 
 .prev-btn {
     right: 20rem;
+}
+
+/* Responsive Design for Movile */
+@media only screen and (max-width: 600px) {
+    .intro {
+        display: none;
+    }
+
+    .signup {
+        background: var(--theme-gradient-down);
+    }
+
+    form h1 {
+        color: white;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .s-btn {
+        background: white;
+        color: black;
+    }
+    .next-btn {
+        right: 2.5rem;
+    }
+
+    .final-form-btns {
+        transform: translateX(9.5rem);
+    }
 }

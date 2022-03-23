@@ -37,7 +37,7 @@ const Home = () => {
           </div>
         </ul>
 
-        <Link to={'/profile'}>
+        <Link to={'/profile'} style={{textDecoration: 'none'}}>
         <div className="profile-link">
           <div className="circle"></div>
           <h2>Profile</h2>

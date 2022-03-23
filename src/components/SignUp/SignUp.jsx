@@ -97,7 +97,7 @@ const [names, setNames] = useContext(NameContext)
                 <input type="date" className='date' onChange={(e) => setUserDate(e.target.value)} />
             </div>
 
-            <button className="btn" onClick={(e) => slideForm(e)}>Next</button>
+            <button className="btn next-btn s-btn" onClick={(e) => slideForm(e)}>Next</button>
         </form>
 
         <form action="" className={ formIndex === 1 ? `form-active form-right` : 'sign-in-form'}>
@@ -115,9 +115,10 @@ const [names, setNames] = useContext(NameContext)
             <div className='input-item'>
                 <input type="password" name="password-confirm" placeholder="Confirm Password" onChange={(e) => setUserConfirmedPassword(e.target.value)} />
             </div>
-
-            <button className="btn prev-btn" onClick={(e) => previous(e)}>Previous</button>
-            <button className="btn" onClick={(e) => submit(e)}>Submit</button>
+            <div className="final-form-btns">
+            <button className="btn prev-btn s-btn" onClick={(e) => previous(e)}>Previous</button>
+            <button className="btn s-btn" onClick={(e) => submit(e)}>Submit</button>
+            </div>
         </form>
     </div>
   )

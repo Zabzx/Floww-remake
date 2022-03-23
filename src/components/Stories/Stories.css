@@ -50,4 +50,12 @@
     .stories {
         justify-content: center;
     }
+
+    .story-item img {
+        width: 4rem;
+    }
+
+    .story-item p {
+        top: 5rem;
+    }
 }
