@@ -72,6 +72,11 @@ const previous = (e) => {
 //Context
 const [names, setNames] = useContext(NameContext)
 
+document.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {
+        slideForm(e);
+    }
+})
   return (
     <div className="signup">
         <div className="intro">
