@@ -56,6 +56,12 @@ input {
     transition: 100ms;
 }
 
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  
 /* Responsive design for mobile */
 @media only screen and (max-width: 1024px) {
     body, html {

@@ -22,11 +22,13 @@ const slideForm = (e) => {
         return;
     }
     setFormIndex(formIndex + 1);
+    console.log(formIndex)
 }
 
 const previous = (e) => {
     e.preventDefault();
     setFormIndex(formIndex - 1);
+    console.log(formIndex)
 }
 
  //Form Validation
@@ -72,11 +74,6 @@ const previous = (e) => {
 //Context
 const [names, setNames] = useContext(NameContext)
 
-document.addEventListener('keydown', (e) => {
-    if (e.keyCode === 13) {
-        slideForm(e);
-    }
-})
   return (
     <div className="signup">
         <div className="intro">
