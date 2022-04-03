@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './SignUp.css'
 import { NameContext } from '../../context/NameContext'
@@ -7,9 +7,21 @@ import SignUpImage from '../../assets/SignUpImage.svg'
 
 const SignUp = () => {
 
+//Context
+const [names, setNames] = useContext(NameContext)
+
+ //Form Validation
+ const [userFirstName, setUserFirstName] = useState('')
+ const [userLastName, setUserLastName] = useState('')
+ const [userDate, setUserDate] = useState('')
+ const [userUsername, setUserUsername] = useState('')
+ const [userPassword, setUserPassword] = useState('')
+ const [userConfirmedPassword, setUserConfirmedPassword] = useState('')
+
 //Toggling Forms
 const [formIndex, setFormIndex] = useState(0);
 
+// Change form function
 const slideForm = (e) => {
     e.preventDefault();
 
@@ -21,23 +33,17 @@ const slideForm = (e) => {
         alert('Please enter a date of birth.')
         return;
     }
+    console.log(userFirstName)
     setFormIndex(formIndex + 1);
-    console.log(formIndex)
 }
 
+//Previous form function
 const previous = (e) => {
     e.preventDefault();
     setFormIndex(formIndex - 1);
-    console.log(formIndex)
 }
 
- //Form Validation
- const [userFirstName, setUserFirstName] = useState('')
- const [userLastName, setUserLastName] = useState('')
- const [userDate, setUserDate] = useState('')
- const [userUsername, setUserUsername] = useState('')
- const [userPassword, setUserPassword] = useState('')
- const [userConfirmedPassword, setUserConfirmedPassword] = useState('')
+//Submit form function
 
  let navigate = useNavigate()
 
@@ -71,8 +77,19 @@ const previous = (e) => {
     navigate('/home')
 }
 
-//Context
-const [names, setNames] = useContext(NameContext)
+useEffect(() => {
+    const listener = (e) => {
+      if (e.keyCode === 13 && formIndex === 0) {
+          slideForm(e);
+      } else if (e.keyCode === 13 && formIndex === 1) {
+          submit(e);
+      }
+    }
+  
+    document.addEventListener('keydown', listener);
+    // Cleanup later by removing the listener
+    return () => document.removeEventListener('keydown', listener)
+  }, [userFirstName, userLastName, userDate, userUsername, userPassword, userConfirmedPassword])
 
   return (
     <div className="signup">
