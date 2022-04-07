@@ -75,6 +75,7 @@ const previous = (e) => {
     }
 
     navigate('/home')
+    document.title = 'Floww | Home'
 }
 
 useEffect(() => {
