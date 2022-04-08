@@ -130,16 +130,6 @@
     margin-top: 3rem;
 }
 
-.post-form {
-    position: relative;
-}
-
-.post-form button {
-    position: absolute;
-    top: 5.2rem;
-    left: 31rem;
-}
-
 .post-input {
     width: 80%;
     margin-top: 5rem;
@@ -256,10 +246,6 @@
         width: 75px;
         margin: 0;
         padding: 0;
-    }
-
-    .post-form button {
-        left: 19rem;
     }
 
     .main {

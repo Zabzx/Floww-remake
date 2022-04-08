@@ -46,7 +46,7 @@ const Posts = () => {
   return (
     <div className="posts">
 
-        <form action="" className='form-active post-form'>
+        <form action="" className='post-form'>
           <input type="text" name='post' className='post-input' placeholder="What's on your mind?" onChange={(e) => {setPostInputValue(e.target.value)
           postValid(e)}} />
           <button className={!postReady ? 'btn-gray post-btn' : 'btn post-btn'} onClick={(e) => uploadPost(e)}>Post</button>

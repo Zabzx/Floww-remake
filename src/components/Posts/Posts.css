@@ -1,3 +1,23 @@
+/* Input section of Posts */
+.post-form {
+    position: relative;
+}
+
+.post-form input {
+    margin: 0;
+    padding: 0 0 0 .8rem;
+}
+
+.post-form input:focus {
+    outline: none;
+}
+
+.post-btn {
+    position: absolute;
+    right: 20%;
+    top: 5%;
+}
+
 .posts {
     margin-top: 3rem;
     display: flex;
@@ -56,13 +76,9 @@
 
 /* Responsive design for mobile */
 @media only screen and (max-width: 1240px) {
-    .post-btn {
-        margin-left: -170px;
-    }
+
 }
 
 @media only screen and (max-width: 600px) {
-    .post-btn {
-        margin-left: 30px;
-    }
+    
 }
