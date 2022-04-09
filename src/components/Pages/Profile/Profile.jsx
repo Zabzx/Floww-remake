@@ -28,13 +28,17 @@ const Profile = () => {
     <>
     <Nav/>
     <div className='profile'>
+        <div className="profile-flex">
+        <div className="profile-input">
         <h1>Change profile picture</h1>
         <input className='pfp-input' type="file" onChange={(e) => {
         const file = e.target.files[0]
         setUserImage(file)
         }}/>
+        </div>
         <div className="user-img-container">
         <img src={loadedUserImage} alt="" />
+        </div>
         </div>
 
         <button className="btn" onClick={setPfp}>Set Profile Picture</button>
