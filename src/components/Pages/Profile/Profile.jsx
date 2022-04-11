@@ -36,7 +36,7 @@ const Profile = () => {
   }
   return (
     <>
-    <Nav/>
+    <Nav navlink={'Home'}/>
     <div className='profile profile-container'>
         <div className="profile-input">
         <h1>Change profile picture</h1>
@@ -51,7 +51,7 @@ const Profile = () => {
         <img src={loadedUserImage ? loadedUserImage : PlaceholderPfp} alt="" />
         </div>
     </div>
-    { hasPfp ? <div className="alert">New Profile Picture Added! <BsPatchCheckFill/></div> : ''}
+    <div className={hasPfp ? "alert alert-active" : "alert"}>New Profile Picture Added! <BsPatchCheckFill/></div>
     </>
   )
 }

@@ -33,6 +33,16 @@
     position: absolute;
     top: 2%;
     left: 5%;
+    transition: 300ms;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.alert-active {
+    transform: scale(1);
 }
 
 /* Responsive design for mobile */

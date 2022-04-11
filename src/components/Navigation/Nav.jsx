@@ -8,19 +8,27 @@ const Nav = () => {
 
   const openTrending = () => {
     setResponsiveContext({...responsiveContext, trending: !responsiveContext.trending})
-    console.log('hrer')
   }
 
   return (
-    <header>
+    <div className="header-container">
+    <div className="header profile-container">
+      <div className="nav-logo">
         <h1>Floww</h1>
+      </div>
 
-        <div className="menu" onClick={openTrending}>
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
-    </header>
+      <ul className="nav-links">
+        <li>Home</li>
+        <li>Profile</li>
+      </ul>
+
+      <div className="nav-menu">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+    </div>
+    </div>
   )
 }
 
