@@ -1,8 +1,8 @@
 import './Nav.css'
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import { ResponsiveContext } from '../../context/ResponsioveContext'
 
-const Nav = () => {
+const Nav = ({useLinks}) => {
 
   const [responsiveContext, setResponsiveContext] = useContext(ResponsiveContext)
 
@@ -12,7 +12,7 @@ const Nav = () => {
 
   return (
     <div className="header-container">
-    <div className="header profile-container">
+    <header className="header profile-container">
       <div className="nav-logo">
         <h1>Floww</h1>
       </div>
@@ -22,12 +22,12 @@ const Nav = () => {
         <li>Profile</li>
       </ul>
 
-      <div className="nav-menu">
+      {useLinks ? <div className="nav-menu">
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
-      </div>
-    </div>
+      </div> : ''}
+      </header>
     </div>
   )
 }

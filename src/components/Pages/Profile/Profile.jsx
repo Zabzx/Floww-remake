@@ -36,7 +36,7 @@ const Profile = () => {
   }
   return (
     <>
-    <Nav navlink={'Home'}/>
+    <Nav useLinks={false}/>
     <div className='profile profile-container'>
         <div className="profile-input">
         <h1>Change profile picture</h1>

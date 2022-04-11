@@ -1,3 +1,39 @@
 .header-container {
     background: var(--theme-gradient-right);
 }
+
+header {
+    display: flex;
+    align-items: center;
+    height: 5.5rem;
+    color: white;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.nav-menu .line {
+    height: 5px;
+    width: 35px;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.line + .line {
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-menu {
+        display: block;
+    }
+}
