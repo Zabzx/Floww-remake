@@ -1,38 +1,24 @@
-.profile {
-    text-align: center;
-    background-color: white;
-    position: relative;
-    height: 50vh;
+.profile-container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.profile-flex {
+.profile {
+    margin-top: 3rem;
     display: flex;
-    gap: 2em;
+    justify-content: space-between;
     align-items: center;
 }
 
-.profile-input {
-    flex: 2;
-}
 
 .pfp-input {
     border: none;
 }
 
-.user-img-container {
-    text-align: center;
-    height: 200px;
-    width: 200px;
-    flex: 1;
-} 
-
-.user-img-container img {
+.profile-image img {
     border-radius: 1rem;
-}
-
-.profile button {
-    position: absolute;
-    left: 10%;
+    height: 300px;
+    width: 300px;
 }
 
 /* Responsive design for mobile */
