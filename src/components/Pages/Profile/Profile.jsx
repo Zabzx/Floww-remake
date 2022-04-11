@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { PfpContext } from '../../../context/PfpContext';
+import { BsPatchCheckFill } from 'react-icons/bs'
 import Nav from '../../Navigation/Nav';
+import PlaceholderPfp from '../../../assets/placeholder-pfp.jpg'
 import './Profile.css'
 
 const Profile = () => {
     
   const [userImage, setUserImage] = useState('')
   const [loadedUserImage, setLoadedUserImage] = useState('');
-  const [userPfp, setuserPfp] = useContext(PfpContext)
+  const [userPfp, setuserPfp] = useContext(PfpContext);
+
+  //Alert state
+  const [hasPfp, sethasPfp] = useState(false)
   
   useEffect(() => {
       if (userImage) {
@@ -23,6 +28,11 @@ const Profile = () => {
 
   const setPfp = () => {
       setuserPfp(loadedUserImage)
+      sethasPfp(true);
+
+      setTimeout(() => {
+        sethasPfp(false);
+      }, 3000)
   }
   return (
     <>
@@ -38,9 +48,10 @@ const Profile = () => {
         <button className="btn" onClick={setPfp}>Set Profile Picture</button>
         </div>
         <div className="profile-image">
-        <img src={loadedUserImage} alt="" />
+        <img src={loadedUserImage ? loadedUserImage : PlaceholderPfp} alt="" />
         </div>
     </div>
+    { hasPfp ? <div className="alert">New Profile Picture Added! <BsPatchCheckFill/></div> : ''}
     </>
   )
 }
