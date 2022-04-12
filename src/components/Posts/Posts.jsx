@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import './Posts.css'
 import { PostContext } from '../../context/PostContext'
 import { NameContext } from '../../context/NameContext'
@@ -15,6 +15,7 @@ const Posts = () => {
   const [postReady, setPostReady] = useState(false)
 
   //Context
+  const [posts, setPosts] = useContext(PostContext)
   const [names, setNames] = useContext(NameContext);
   const [userPfp, setUserPfp] = useContext(PfpContext);
   const [likedPosts, setLikedPosts] = useContext(LikedPostContext);
@@ -46,13 +47,14 @@ const Posts = () => {
 
   }
 
-  const [posts, setPosts] = useContext(PostContext)
-
   //Like a post function
-  const likePost = (e) => {
-    setLikedPosts([...likedPosts, e.target.parentElement.parentElement])
-    console.log(likedPosts)
+  const likePost = (post) => {
+    setLikedPosts([post, ...likedPosts])
   }
+
+  useEffect(() => {
+    console.log(likedPosts)
+  }, [likedPosts])
 
   return (
     <div className="posts">
@@ -77,7 +79,7 @@ const Posts = () => {
         <p className="post-content">{post.content}</p>
 
         <div className="post-interact">
-            <BsHeart onClick={(e) => likePost(e)}/>
+            <BsHeart onClick={() => likePost(post)}/>
             <FaRegComment/>
             <BsBookmarkCheck className='bookmark'/>
         </div>
