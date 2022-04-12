@@ -9,11 +9,13 @@ import { PostProvider } from './context/PostContext';
 import { ResponsiveContextProvider } from './context/ResponsioveContext';
 import Profile from './components/Pages/Profile/Profile';
 import { PfpProvider } from './context/PfpContext';
+import { LikedPostsProvider } from './context/LikedPostsContext'
 
 ReactDOM.render(
   <React.StrictMode>
     <NameProvider>
     <PostProvider>
+    <LikedPostsProvider>
     <ResponsiveContextProvider>
     <PfpProvider>
     <BrowserRouter>
@@ -25,6 +27,7 @@ ReactDOM.render(
     </BrowserRouter>
     </PfpProvider>
     </ResponsiveContextProvider>
+    </LikedPostsProvider>
     </PostProvider>
     </NameProvider>
   </React.StrictMode>,

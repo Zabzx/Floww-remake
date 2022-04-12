@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react'
 import './Posts.css'
 import { PostContext } from '../../context/PostContext'
 import { NameContext } from '../../context/NameContext'
+import { LikedPostContext } from '../../context/LikedPostsContext'
 import { PfpContext } from '../../context/PfpContext'
 import { BsHeart, BsBookmarkCheck } from 'react-icons/bs'
 import { FaRegComment } from 'react-icons/fa'
@@ -9,10 +10,14 @@ import DefaultPfp from '../../assets/default-pfp.jpg'
 
 const Posts = () => {
 
+  //State
   const [postInputValue, setPostInputValue] = useState('')
   const [postReady, setPostReady] = useState(false)
+
+  //Context
   const [names, setNames] = useContext(NameContext);
-  const [userPfp, setUserPfp] = useContext(PfpContext)
+  const [userPfp, setUserPfp] = useContext(PfpContext);
+  const [likedPosts, setLikedPosts] = useContext(LikedPostContext);
 
   const postValid = (e) => {
     if (e.target.value !== '') {
@@ -45,7 +50,8 @@ const Posts = () => {
 
   //Like a post function
   const likePost = (e) => {
-    console.log(e.target.parentElement.parentElement)
+    setLikedPosts([...likedPosts, e.target.parentElement.parentElement])
+    console.log(likedPosts)
   }
 
   return (
