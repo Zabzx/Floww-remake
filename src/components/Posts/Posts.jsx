@@ -43,6 +43,11 @@ const Posts = () => {
 
   const [posts, setPosts] = useContext(PostContext)
 
+  //Like a post function
+  const likePost = (e) => {
+    console.log(e.target.parentElement.parentElement)
+  }
+
   return (
     <div className="posts">
 
@@ -54,7 +59,7 @@ const Posts = () => {
 
     {posts.map((post) => {
         return (
-            <div className='post' key={post.id}>
+        <div className='post' key={post.id}>
         <div className="post-header">
           <div className="user-pfp">
             <img src={post.pfp} alt="" />
@@ -66,11 +71,11 @@ const Posts = () => {
         <p className="post-content">{post.content}</p>
 
         <div className="post-interact">
-            <BsHeart/>
+            <BsHeart onClick={(e) => likePost(e)}/>
             <FaRegComment/>
             <BsBookmarkCheck className='bookmark'/>
         </div>
-    </div>
+      </div>
         )
     })}
     

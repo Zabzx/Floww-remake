@@ -52,6 +52,10 @@ const Profile = () => {
         </div>
     </div>
     <div className={hasPfp ? "alert alert-active" : "alert"}>New Profile Picture Added! <BsPatchCheckFill/></div>
+
+    <div className="liked-posts">
+      <h1 className="profile-container">Liked Posts</h1>
+    </div>
     </>
   )
 }

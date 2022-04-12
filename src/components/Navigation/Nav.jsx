@@ -22,7 +22,7 @@ const Nav = ({useLinks}) => {
         <li>Profile</li>
       </ul>
 
-      {useLinks ? <div className="nav-menu">
+      {useLinks ? <div className="nav-menu" onClick={openTrending}>
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>

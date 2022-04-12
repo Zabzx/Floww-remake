@@ -15,7 +15,7 @@ const Home = () => {
   const [responsiveContext, setResponsiveConext] = useContext(ResponsiveContext)
   return (
     <>
-    <Nav/>
+    <Nav useLinks={true}/>
     <div className="home">
       
       <div className="dashboard">
