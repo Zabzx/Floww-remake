@@ -5,7 +5,7 @@ import { NameContext } from '../../context/NameContext'
 import { LikedPostContext } from '../../context/LikedPostsContext'
 import { PfpContext } from '../../context/PfpContext'
 import { BsHeart, BsBookmarkCheck } from 'react-icons/bs'
-import { FaRegComment } from 'react-icons/fa'
+import { AiOutlineComment } from 'react-icons/ai'
 import DefaultPfp from '../../assets/default-pfp.jpg'
 
 const Posts = () => {
@@ -79,8 +79,11 @@ const Posts = () => {
         <p className="post-content">{post.content}</p>
 
         <div className="post-interact">
-            <BsHeart onClick={() => likePost(post)}/>
-            <FaRegComment/>
+            <BsHeart className={post.liked ? 'like-heart': 'heart'} onClick={() => {
+              likePost(post)
+              post.liked = !post.liked
+              }}/>
+            <AiOutlineComment/>
             <BsBookmarkCheck className='bookmark'/>
         </div>
       </div>

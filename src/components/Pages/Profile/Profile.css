@@ -93,7 +93,7 @@
     margin-top: .8rem;
 }
 
-.post-interact {
+.liked-post-interact {
     margin-top: .6rem;
     display: flex;
     gap: 4rem;
@@ -102,6 +102,10 @@
 
 .bookmark {
     margin-left: 29rem;
+}
+
+.color-red {
+    color: red;
 }
 
 /* Responsive design for mobile */

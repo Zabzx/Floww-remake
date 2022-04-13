@@ -19,8 +19,8 @@ const Nav = ({useLinks}) => {
       </div>
 
       <ul className="nav-links">
-        <Link to={'/home'}><li>Home</li></Link>
-        <Link to={'/profile'}><li>Profile</li></Link>
+        <Link to={'/home'} style={{textDecoration: 'none', color: 'white'}}><li>Home</li></Link>
+        <Link to={'/profile'} style={{textDecoration: 'none', color: 'white'}}><li>Profile</li></Link>
       </ul>
 
       {useLinks ? <div className="nav-menu" onClick={openTrending}>

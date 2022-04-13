@@ -23,7 +23,8 @@ export const PostProvider = (props) => {
             name: 'Natalie Piquette',
             img: STRAWBERRIES,
             date: '3 minutes ago',
-            content: 'Starting the morning off with yummy strawberries.😋🍓'
+            content: 'Starting the morning off with yummy strawberries.😋🍓',
+            liked: false
         },
         {
           id: 2,
@@ -31,7 +32,8 @@ export const PostProvider = (props) => {
           name: 'Joshua Rhode',
           img: BMW,
           date: '23 minutes ago',
-          content: "Took her on a joyride today, she's as beautiful as the day I met her."
+          content: "Took her on a joyride today, she's as beautiful as the day I met her.",
+          liked: false
         },
         {
           id: 3,
@@ -39,7 +41,8 @@ export const PostProvider = (props) => {
           name: 'Hana Orihime',
           img: FLOWERS,
           date: '8 minutes ago',
-          content: "Getting better at photographt 🥺💜 absolutely love this shot!"
+          content: "Getting better at photographt 🥺💜 absolutely love this shot!",
+          liked: false
         },
         {
           id: 4,
@@ -47,7 +50,8 @@ export const PostProvider = (props) => {
           name: 'Michael Cole',
           img: TABLET,
           date: '30 minutes ago',
-          content: 'Relaxing on the weekend.'
+          content: 'Relaxing on the weekend.',
+          liked: false
         },
         {
           id: 5,
@@ -55,7 +59,8 @@ export const PostProvider = (props) => {
           name: 'Zach',
           img: SNOW,
           date: '2 minutes ago',
-          content: 'Take me back ⛷🏔⛄ I missed this place so much!'
+          content: 'Take me back ⛷🏔⛄ I missed this place so much!',
+          liked: false
         }
     ]);
 

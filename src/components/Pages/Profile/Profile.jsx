@@ -75,8 +75,8 @@ const Profile = () => {
         <p className="post-date">{post.date}</p>
         <p className="post-content">{post.content}</p>
 
-        <div className="post-interact">
-            <FaRegComment/>
+        <div className="liked-post-interact">
+            <FaRegComment className='color-red'/>
             <BsBookmarkCheck className='bookmark'/>
         </div>
       </div>

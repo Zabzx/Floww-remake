@@ -64,7 +64,7 @@
 }
 
 .post-interact {
-    margin-top: .6rem;
+    margin-top: 2rem;
     display: flex;
     gap: 4rem;
     font-size: 2rem;
@@ -72,6 +72,15 @@
 
 .bookmark {
     margin-left: 29rem;
+}
+
+.heart {
+    cursor: pointer;
+}
+
+.like-heart {
+    color: red;
+    cursor: pointer;
 }
 
 /* Responsive design for mobile */
