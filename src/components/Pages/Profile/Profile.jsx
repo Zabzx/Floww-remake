@@ -1,18 +1,25 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { PfpContext } from '../../../context/PfpContext';
+import { LikedPostContext } from '../../../context/LikedPostsContext';
 import { BsPatchCheckFill } from 'react-icons/bs'
 import Nav from '../../Navigation/Nav';
 import PlaceholderPfp from '../../../assets/placeholder-pfp.jpg'
+import { BsHeart, BsBookmarkCheck } from 'react-icons/bs'
+import { FaRegComment } from 'react-icons/fa'
 import './Profile.css'
 
 const Profile = () => {
     
+  //State
   const [userImage, setUserImage] = useState('')
   const [loadedUserImage, setLoadedUserImage] = useState('');
-  const [userPfp, setuserPfp] = useContext(PfpContext);
 
   //Alert state
   const [hasPfp, sethasPfp] = useState(false)
+
+  //Context
+  const [userPfp, setuserPfp] = useContext(PfpContext);
+  const [likedPosts, setLikedPosts] = useContext(LikedPostContext)
   
   useEffect(() => {
       if (userImage) {
@@ -53,8 +60,28 @@ const Profile = () => {
     </div>
     <div className={hasPfp ? "alert alert-active" : "alert"}>New Profile Picture Added! <BsPatchCheckFill/></div>
 
-    <div className="liked-posts">
-      <h1 className="profile-container">Liked Posts</h1>
+      <h1 className='profile-container'>Liked Posts</h1>
+      <div className="liked-posts profile-container">
+      {likedPosts.map((post) => {
+        return (
+        <div className='liked-post' key={post.id}>
+        <div className="liked-post-header">
+          <div className="user-pfp">
+            <img src={post.pfp} alt="" />
+            </div>
+            <h1 className="user-name">{post.name}</h1>
+        </div>
+        <img className='post-img' src={post.img} alt="" />
+        <p className="post-date">{post.date}</p>
+        <p className="post-content">{post.content}</p>
+
+        <div className="post-interact">
+            <FaRegComment/>
+            <BsBookmarkCheck className='bookmark'/>
+        </div>
+      </div>
+        )
+      })}
     </div>
     </>
   )

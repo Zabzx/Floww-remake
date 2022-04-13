@@ -1,6 +1,7 @@
 import './Nav.css'
 import React, {useContext, useState} from 'react'
 import { ResponsiveContext } from '../../context/ResponsioveContext'
+import { Link } from 'react-router-dom';
 
 const Nav = ({useLinks}) => {
 
@@ -18,8 +19,8 @@ const Nav = ({useLinks}) => {
       </div>
 
       <ul className="nav-links">
-        <li>Home</li>
-        <li>Profile</li>
+        <Link to={'/home'}><li>Home</li></Link>
+        <Link to={'/profile'}><li>Profile</li></Link>
       </ul>
 
       {useLinks ? <div className="nav-menu" onClick={openTrending}>
