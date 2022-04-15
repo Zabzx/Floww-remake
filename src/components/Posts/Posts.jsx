@@ -49,12 +49,16 @@ const Posts = () => {
 
   //Like a post function
   const likePost = (post) => {
+    if(likedPosts.includes(post)) {
+    }
     setLikedPosts([post, ...likedPosts])
   }
 
-  useEffect(() => {
-    console.log(likedPosts)
-  }, [likedPosts])
+  //Remove a like function
+  const removeLike = (id) => {
+    setLikedPosts(likedPosts.filter((post) => post.id != id.id))
+    console.log('e')
+  }
 
   return (
     <div className="posts">
@@ -80,8 +84,12 @@ const Posts = () => {
 
         <div className="post-interact">
             <BsHeart className={post.liked ? 'like-heart': 'heart'} onClick={() => {
-              likePost(post)
-              post.liked = !post.liked
+              if (!post.liked) {
+                likePost(post)
+                post.liked = !post.liked
+              } else {
+                removeLike(post)
+              }
               }}/>
             <AiOutlineComment/>
             <BsBookmarkCheck className='bookmark'/>
