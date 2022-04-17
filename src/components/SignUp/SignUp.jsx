@@ -72,6 +72,7 @@ const previous = (e) => {
 
     if (userPassword !== userConfirmedPassword) {
         alert(`Passwords don't match.`)
+        return;
     }
 
     navigate('/home')
