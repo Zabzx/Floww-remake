@@ -58,6 +58,7 @@ const Posts = () => {
   const removeLike = (id) => {
     setLikedPosts(likedPosts.filter((post) => post.id != id.id))
     console.log('e')
+    id.liked = !id.liked
   }
 
   return (
