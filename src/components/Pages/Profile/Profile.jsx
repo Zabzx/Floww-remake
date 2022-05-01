@@ -11,7 +11,7 @@ import './Profile.css'
 const Profile = () => {
     
   //State
-  const [userImage, setUserImage] = useState('')
+  const [userImage, setUserImage] = useState('');
   const [loadedUserImage, setLoadedUserImage] = useState('');
 
   //Alert state
@@ -23,7 +23,7 @@ const Profile = () => {
   
   useEffect(() => {
       if (userImage) {
-          const reader = new FileReader()
+          const reader = new FileReader();
           reader.onloadend = () => {
               setLoadedUserImage(reader.result)
           }
@@ -60,7 +60,9 @@ const Profile = () => {
         <button className="btn" onClick={setPfp}>Set Profile Picture</button>
         </div>
         <div className="profile-image">
-        <img src={loadedUserImage ? loadedUserImage : PlaceholderPfp} alt="" />
+        <img src={userPfp ? userPfp : (
+          loadedUserImage ? loadedUserImage : PlaceholderPfp
+        )} alt="" />
         </div>
     </div>
     <div className={hasPfp ? "alert alert-active" : "alert"}>New Profile Picture Added! <BsPatchCheckFill/></div>
