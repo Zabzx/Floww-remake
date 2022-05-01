@@ -34,12 +34,17 @@ const Profile = () => {
   }, [userImage])
 
   const setPfp = () => {
+    if (userImage) {
       setuserPfp(loadedUserImage)
       sethasPfp(true);
 
       setTimeout(() => {
         sethasPfp(false);
       }, 3000)
+    } else {
+      alert("Please select a valid image.");
+      return;
+    }
   }
   return (
     <>
