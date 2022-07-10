@@ -38,10 +38,27 @@ body {
 
 .input-item {
     text-align: center;
+    position: relative;
 }
 
 .input-item + .input-item {
     margin-top: 5rem;
+}
+
+label {
+    position: absolute;
+    left: 27%;
+    top: 30%;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+    top: -15%;
+    left: 26%;
+    background-color: white;
+    font-size: .9rem;
 }
 
 input {

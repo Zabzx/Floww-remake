@@ -105,13 +105,15 @@ useEffect(() => {
             <h1>Floww Sign Up</h1>
 
             <div className='input-item'>
-                <input type="text" name="firstname" placeholder="First Name" onChange={(e) => {setUserFirstName(e.target.value)
+                <input type="text" name="firstname" id="firstname" className="form__input" placeholder=" " onChange={(e) => {setUserFirstName(e.target.value)
                 setNames({...names, firstname: e.target.value})}} />
+                <label className="form__label" htmlFor="first_name">First Name</label>
             </div>
 
             <div className='input-item'>
-                <input type="text" name="lastname" placeholder="Last Name" onChange={(e) => {setUserLastName(e.target.value)
+                <input type="text" name="lastname" id="last_name" className="form__input" autoComplete="off" placeholder=" " onChange={(e) => {setUserLastName(e.target.value)
                 setNames({...names, lastname: e.target.value})}} />
+                <label className="form__label" htmlFor="last_name">Last Name</label>
             </div>
 
             <div className='input-item'>
@@ -125,17 +127,21 @@ useEffect(() => {
             <h1>Floww Sign Up</h1>
 
             <div className='input-item'>
-                <input type="text" name="username" placeholder="Username" onChange={(e) => {setUserUsername(e.target.value)
+                <input type="text" name="username" id="username" className="form__input" placeholder=" " onChange={(e) => {setUserUsername(e.target.value)
                 setNames({...names, username: e.target.value})}} />
+                <label htmlFor="username" className="form__label">Username</label>
             </div>
 
             <div className='input-item'>
-                <input type="password" name="password" placeholder="Password" onChange={(e) => setUserPassword(e.target.value)} />
+                <input type="password" name="password" id="password" className="form__input" placeholder=" " onChange={(e) => setUserPassword(e.target.value)} />
+                <label htmlFor="password" className="form__label">Password</label>
             </div>
 
             <div className='input-item'>
-                <input type="password" name="password-confirm" placeholder="Confirm Password" onChange={(e) => setUserConfirmedPassword(e.target.value)} />
+                <input type="password" name="password-confirm" id="password-confirm" className="form__input" placeholder=" " onChange={(e) => setUserConfirmedPassword(e.target.value)} />
+                <label htmlFor="password-confirm" className="form__label">Confirm Password</label>
             </div>
+
             <div className="final-form-btns">
             <button className="btn prev-btn s-btn" onClick={(e) => previous(e)}>Previous</button>
             <button className="btn s-btn" onClick={(e) => submit(e)}>Submit</button>
