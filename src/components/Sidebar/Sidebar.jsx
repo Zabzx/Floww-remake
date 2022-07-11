@@ -9,28 +9,27 @@ const Sidebar = () => {
   return (
     <div className="dashboard">
         <h1>Dashboard</h1>
+
         <ul className="dashboard-options">
-          <div>
+
+          <div className="dashboard-option">
           <FiHome className='dashboard-icon'/>
           <li className='dashboard-active'>Home</li>
           </div>
 
-          <div className='notif'>
+          <div className='notif dashboard-option'>
           <FiBell className='dashboard-icon'/>
           <li className='dashboard-active'>Notifications</li>
           </div>
 
-          <div className='msg'>
+          <div className='msg dashboard-option'>
           <FiMail className='dashboard-icon'/>
           <li className='dashboard-active'>Messages</li>
           </div>
         </ul>
 
         <Link to={'/profile'} style={{textDecoration: 'none'}}>
-        <div className="profile-link">
-          <div className="circle"></div>
-          <h2>Profile</h2>
-        </div>
+        
         </Link>
       </div>
   )
