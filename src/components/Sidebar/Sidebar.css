@@ -1,99 +1,110 @@
-.dashboard {
+.sidebar {
     width: 20%;
     height: 100vh;
     background-color: white;
     position: sticky;
-    top: 0;
+    top: 10px;
+    position: relative;
+    border-top-right-radius: 100px;
 }
 
-.dashboard h1 {
+ul {
+    list-style: none;
+}
+
+.sidebar h1 {
+    font-size: 2rem;
+    margin: 2rem 0 5rem 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     color: var(--primary-blue);
-    padding-top: 2rem;
-    text-align: center;
 }
 
-.dashboard-active {
-    color: var(--primary-blue)
+.sidebar-options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    gap: 4rem;
+    transform: translate(-50%);
+    width: 100%;
 }
 
-.dashboard li {
-    text-align: right;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
+.sidebar-option-icon {
+    font-size: 2rem;
+}
+
+.sidebar-option {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
     position: relative;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
 }
 
-.dashboard li::after {
+.sidebar-option::after {
     content: '';
     position: absolute;
-    width: .4rem;
-    height: 0%;
     background: var(--theme-gradient-down);
+    height: 0%;
+    width: 5px;
     right: 0;
     top: 0;
-    transition: 200ms ease-in-out;
+    transition: 200ms;
 }
 
-.dashboard li:hover::after {
+.sidebar-option:hover::after {
     height: 100%;
 }
 
+.sidebar-option li {
+    font-size: 1.3rem;
+}
+
+/* alerts */
 .notif {
     position: relative;
 }
 
 .notif::before {
-    content: '';
+    content: "3";
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100;
-    padding: 20px;
-    color: red;
-}
-
-.msg {
-    position: relative;
-}
-.msg::before {
-    content: '1';
-    position: absolute;
-    border-radius: 100%;
+    top: -10%;
+    right: -20%;
     background-color: var(--primary-green);
-    color: white;
-    left: -2rem;
+    border-radius: 100%;
     height: 20px;
     width: 20px;
-    font-size: 1rem;
     text-align: center;
+    color: white;
 }
 
-.dashboard-option {
+.message {
+    position: relative;
+}
+
+.message::before {
+    content: "1";
+    position: absolute;
+    top: -10%;
+    right: -20%;
+    background-color: var(--primary-green);
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    color: white;
+    z-index: 5;
+}
+
+.profile-link {
+    position: absolute;
+    text-align: center;
+    display: flex;
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.dashboard-options {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.dashboard-options div {
-    display: flex;
-    align-items: center;
-}
-
-.dashboard-icon {
-    font-size: 2rem;
+    justify-content: center;
+    color: var(--primary-blue);
+    bottom: 20%;
+    font-size: 10rem;
 }

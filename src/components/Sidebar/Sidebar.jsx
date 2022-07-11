@@ -4,34 +4,38 @@ import {FiHome} from 'react-icons/fi'
 import {FiMail} from 'react-icons/fi'
 import {FiBell} from 'react-icons/fi'
 import { Link } from 'react-router-dom';
+import { IoPersonCircle } from 'react-icons/io5'
 
 const Sidebar = () => {
   return (
-    <div className="dashboard">
+    <div className="sidebar">
         <h1>Dashboard</h1>
 
-        <ul className="dashboard-options">
-
-          <div className="dashboard-option">
-          <FiHome className='dashboard-icon'/>
-          <li className='dashboard-active'>Home</li>
+        <ul className="sidebar-options">
+          <div className="sidebar-option">
+            <FiHome className="sidebar-option-icon" />
+            <li>Home</li>
           </div>
 
-          <div className='notif dashboard-option'>
-          <FiBell className='dashboard-icon'/>
-          <li className='dashboard-active'>Notifications</li>
+          <div className="sidebar-option">
+            <div className="notif">
+            <FiBell className="sidebar-option-icon" />
+            </div>
+            <li>Notifications</li>
           </div>
 
-          <div className='msg dashboard-option'>
-          <FiMail className='dashboard-icon'/>
-          <li className='dashboard-active'>Messages</li>
+          <div className="sidebar-option">
+            <div className="message">
+            <FiMail className="sidebar-option-icon message" />
+            </div>
+            <li>Messages</li>
           </div>
         </ul>
 
-        <Link to={'/profile'} style={{textDecoration: 'none'}}>
-        
-        </Link>
-      </div>
+        <div className="profile-link">
+          <IoPersonCircle />
+        </div>
+    </div>
   )
 }
 
