@@ -2,6 +2,7 @@ import './Nav.css'
 import React, {useContext, useState} from 'react'
 import { ResponsiveContext } from '../../context/ResponsioveContext'
 import { Link } from 'react-router-dom';
+import {SiDialogflow} from 'react-icons/si';
 
 const Nav = ({useLinks}) => {
 
@@ -15,12 +16,12 @@ const Nav = ({useLinks}) => {
     <div className="header-container">
     <header className="header profile-container">
       <div className="nav-logo">
-        <h1>Floww</h1>
+        <SiDialogflow className="nav-logo" />
       </div>
 
       <ul className="nav-links">
-        <Link to={'/home'} style={{textDecoration: 'none', color: 'white'}}><li>Home</li></Link>
-        <Link to={'/profile'} style={{textDecoration: 'none', color: 'white'}}><li>Profile</li></Link>
+        <Link to={'/home'} style={{textDecoration: 'none', color: 'white'}}><li className="nav-link">Home</li></Link>
+        <Link to={'/profile'} style={{textDecoration: 'none', color: 'white'}}><li className="nav-link">Profile</li></Link>
       </ul>
 
       {useLinks ? <div className="nav-menu" onClick={openTrending}>

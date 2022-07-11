@@ -10,6 +10,23 @@ header {
     justify-content: space-between;
 }
 
+.nav-logo {
+    font-size: 3rem;
+}
+
+.nav-link {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    color: var(--primary-blue);
+    border-radius: .9rem;
+    transition: 0.3s;
+}
+
+.nav-link:active {
+    transform: scale(.8);
+}
+
 .nav-links {
     display: flex;
     gap: 3rem;
