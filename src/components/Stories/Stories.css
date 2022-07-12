@@ -10,12 +10,18 @@
     cursor: pointer;
 }
 
-.story-item img:hover {
-    transform: scale(1.1);
-}
 
 .story-item {
     position: relative;
+    transition: 300ms;
+}
+
+.story-item:hover {
+    transform: scale(1.2);
+}
+
+.story-item:hover .cover {
+    opacity: 0;
 }
 
 .story-item p {
@@ -34,10 +40,6 @@
     background: linear-gradient(transparent, black);
     transition: .2s;
     cursor: pointer;
-}
-
-.cover:hover {
-    transform: scale(0);
 }
 
 @media only screen and (max-width: 1024px) {
