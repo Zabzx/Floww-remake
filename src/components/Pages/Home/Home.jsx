@@ -15,6 +15,7 @@ const Home = () => {
     <Nav useLinks={true}/>
     <div className="home">
       <Sidebar />
+      
       <div className="main">
         <Stories/>
         <Posts/>
