@@ -102,9 +102,69 @@ ul {
     position: absolute;
     text-align: center;
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
+    align-items: center;
     color: var(--primary-blue);
-    bottom: 20%;
+    bottom: 10%;
     font-size: 10rem;
+}
+
+.profile-link h1 {
+    margin: 1rem 0 0 0;
+}
+
+/* Responsive design for tablets */
+@media only screen and (max-width: 1150px) {
+
+    .sidebar h1 {
+        display: none;
+    }
+
+    .sidebar-option li {
+        display: none;
+    }
+
+    .sidebar-options {
+        align-items: center;
+        top: 20%;
+    }
+
+    .sidebar-option::after {
+        display: none;
+    }
+
+    .profile-link {
+        font-size: 5rem;
+        bottom: 20%;
+        display: block;
+    }
+
+    .profile-link h1 {
+        color: red;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        position: fixed;
+        z-index: 5;
+        width: 100vw;
+        border-top-right-radius: 0px;
+        height: 100px;
+        bottom: -20px;
+        top: 90%;
+    }
+
+    .sidebar-options {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-link {
+        display: none;
+    }
 }

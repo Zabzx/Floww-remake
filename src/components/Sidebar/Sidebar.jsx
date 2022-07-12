@@ -13,7 +13,7 @@ const Sidebar = () => {
 
         <ul className="sidebar-options">
           <div className="sidebar-option">
-            <FiHome className="sidebar-option-icon" />
+            <FiHome className="sidebar-option-icon home-i" />
             <li>Home</li>
           </div>
 
@@ -32,9 +32,12 @@ const Sidebar = () => {
           </div>
         </ul>
 
+        <Link to='/profile'>
         <div className="profile-link">
           <IoPersonCircle />
+          <h1>Profile</h1>
         </div>
+        </Link>
     </div>
   )
 }
