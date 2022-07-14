@@ -9,7 +9,8 @@ import { PostProvider } from './context/PostContext';
 import { ResponsiveContextProvider } from './context/ResponsioveContext';
 import Profile from './components/Pages/Profile/Profile';
 import { PfpProvider } from './context/PfpContext';
-import { LikedPostsProvider } from './context/LikedPostsContext'
+import { LikedPostsProvider } from './context/LikedPostsContext';
+import EditPopUp from './components/EditPopUp/EditPopUp'
 
 ReactDOM.render(
     <NameProvider>
@@ -22,6 +23,7 @@ ReactDOM.render(
     <Route path='/' element={<App />}/>
     <Route path='/home' element={<Home />}/>
     <Route path='/profile' element={<Profile />}/>
+    <Route path='/edit' element={<EditPopUp />}/>
     </Routes>
     </BrowserRouter>
     </PfpProvider>

@@ -54,9 +54,9 @@ const Profile = () => {
   }
 
   const editUserInfo = () => {
-
+    
   }
-  
+
   return (
     <>
     <Nav useLinks={false}/>
