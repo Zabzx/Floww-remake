@@ -8,12 +8,14 @@ import { BsHeart, BsBookmarkCheck } from 'react-icons/bs'
 import { FaRegComment } from 'react-icons/fa'
 import './Profile.css'
 import { NameContext } from '../../../context/NameContext';
+import EditPopUp from '../../EditPopUp/EditPopUp';
 
 const Profile = () => {
     
   //State
   const [userImage, setUserImage] = useState('');
   const [loadedUserImage, setLoadedUserImage] = useState('');
+  const [showEditModal, setShowEditModal] = useState(false);
 
   //Alert state
   const [hasPfp, sethasPfp] = useState(false)
@@ -54,12 +56,13 @@ const Profile = () => {
   }
 
   const editUserInfo = () => {
-    
+    setShowEditModal(true)
   }
 
   return (
     <>
     <Nav useLinks={false}/>
+    { showEditModal ? <EditPopUp /> : ''}
     <div className='profile profile-container'>
         <div className="profile-input">
         <h1>Change profile picture</h1>
@@ -75,9 +78,9 @@ const Profile = () => {
           loadedUserImage ? loadedUserImage : PlaceholderPfp
         )} alt="" />
 
-        <h1>{userInfo.firstname + ' ' + userInfo.lastname}</h1>
+        <h1>{userInfo.firstName + ' ' + userInfo.lastName}</h1>
         <h2>Username: {userInfo.username}</h2>
-        <button className="btn profile-edit" onClick={() => editUserInfo}>Edit</button>
+        <button className="btn profile-edit" onClick={editUserInfo}>Edit</button>
         </div>
     </div>
 

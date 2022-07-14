@@ -7,9 +7,9 @@ export const NameProvider = (props) => {
     const [names, setNames] = useState(
         {
             id: 1,
-            firstname: '',
-            lastname: '',
-            username: ''
+            firstName: '',
+            lastName: '',
+            userName: ''
         }
     );
 

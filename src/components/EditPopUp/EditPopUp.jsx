@@ -1,22 +1,39 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useContext, useRef } from 'react';
+import { NameContext } from '../../context/NameContext.jsx';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ImCross } from 'react-icons/im';
 import './editpopup.css';
 
 const EditPopUp = () => {
 
     const [changedUserInfo, setChangedUserInfo] = useState({
-        fristName: "",
+        firstName: "",
         lastName: "",
         userName: ""
     });
 
+    const [nameContext, setNameContext] = useContext(NameContext);
+
+    const editUserInfo = (e) => {
+      e.preventDefault();
+
+      setNameContext(changedUserInfo);
+    }
+
+    const closeModal = () => {
+      console.log(modalRef.current)
+      modalRef.current.style.transform = 'scale(0)'
+    }
+
+    const modalRef = useRef();
+
   return (
-    <motion.div className="edit-form-container">
-        <form className="edit-form">
+    <AnimatePresence>
+        <div className="edit-form-container">
+        <motion.form className="edit-form" animate={{scale: 1.3}}>
         <div className="modal-header">
             <h1>Edit</h1>
-            <ImCross />
+            <ImCross className="modal-icon" onClick={closeModal} />
         </div>
         <input type="text" className="edit-input" name="firstname" placeholder='First Name' onChange={(e) => setChangedUserInfo({...changedUserInfo, firstName: e.target.value})} />
         <br />
@@ -25,8 +42,11 @@ const EditPopUp = () => {
         <br />
 
         <input type="text" className="edit-input" name="username" placeholder='User Name' onChange={(e) => setChangedUserInfo({...changedUserInfo, userName: e.target.value})} />
-        </form>
-    </motion.div>
+
+        <button className="btn" onClick={(e) => editUserInfo(e)}>Confirm Changes</button>
+        </motion.form>
+        </div>
+    </AnimatePresence>
   )
 }
 

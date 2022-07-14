@@ -102,7 +102,7 @@ useEffect(() => {
         </div>
 
         <form action="" className={ formIndex === 0 ? `form-active form-right` : 'sign-in-form'}>
-            <h1>Floww Sign Up</h1>
+            <h1 className="form-h1">Floww Sign Up</h1>
 
             <div className='input-item'>
                 <input type="text" name="firstname" id="firstname" className="form__input" placeholder=" " onChange={(e) => {setUserFirstName(e.target.value)
