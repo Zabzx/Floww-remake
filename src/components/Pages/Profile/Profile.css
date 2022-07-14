@@ -6,15 +6,24 @@
 .profile {
     margin-top: 3rem;
     display: flex;
+    gap: 2rem;
     justify-content: space-between;
     align-items: center;
 }
 
 .profile-input {
     flex: 1;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px;
 }
 .pfp-input {
     border: none;
+    margin-top: 2rem;
+}
+
+.profile-btn {
+    margin-top: 2rem;
 }
 
 .profile-image img {

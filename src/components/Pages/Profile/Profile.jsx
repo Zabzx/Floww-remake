@@ -19,7 +19,11 @@ const Profile = () => {
 
   //Context
   const [userPfp, setuserPfp] = useContext(PfpContext);
-  const [likedPosts, setLikedPosts] = useContext(LikedPostContext)
+  const [likedPosts, setLikedPosts] = useContext(LikedPostContext);
+
+  useEffect(() => {
+    console.log(likedPosts)
+  }, []);
   
   useEffect(() => {
       if (userImage) {
@@ -57,7 +61,7 @@ const Profile = () => {
         setUserImage(file)
         }}/>
         <br />
-        <button className="btn" onClick={setPfp}>Set Profile Picture</button>
+        <button className="btn profile-btn" onClick={setPfp}>Set Profile Picture</button>
         </div>
         <div className="profile-image">
         <img src={userPfp ? userPfp : (
@@ -67,6 +71,7 @@ const Profile = () => {
     </div>
     <div className={hasPfp ? "alert alert-active" : "alert"}>New Profile Picture Added! <BsPatchCheckFill/></div>
 
+      { !likedPosts.length === 0 ? <div>
       <h1 className='profile-container'>Liked Posts</h1>
       <div className="liked-posts profile-container">
       {likedPosts.map((post) => {
@@ -90,6 +95,10 @@ const Profile = () => {
         )
       })}
     </div>
+    </div> : 
+    <div className="profile-container">
+      No liked posts yet
+    </div>}
     </>
   )
 }

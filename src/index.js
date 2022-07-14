@@ -12,7 +12,6 @@ import { PfpProvider } from './context/PfpContext';
 import { LikedPostsProvider } from './context/LikedPostsContext'
 
 ReactDOM.render(
-  <React.StrictMode>
     <NameProvider>
     <PostProvider>
     <LikedPostsProvider>
@@ -29,7 +28,6 @@ ReactDOM.render(
     </ResponsiveContextProvider>
     </LikedPostsProvider>
     </PostProvider>
-    </NameProvider>
-  </React.StrictMode>,
+    </NameProvider>,
   document.getElementById('root')
 );
