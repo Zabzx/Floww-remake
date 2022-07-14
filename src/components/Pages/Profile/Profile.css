@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.profile-edit {
+    margin-top: 1rem;
+}
+
 .profile-input {
     flex: 1;
     padding: 2rem;

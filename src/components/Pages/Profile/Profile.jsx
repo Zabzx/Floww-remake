@@ -7,6 +7,7 @@ import PlaceholderPfp from '../../../assets/placeholder-pfp.jpg'
 import { BsHeart, BsBookmarkCheck } from 'react-icons/bs'
 import { FaRegComment } from 'react-icons/fa'
 import './Profile.css'
+import { NameContext } from '../../../context/NameContext';
 
 const Profile = () => {
     
@@ -20,6 +21,7 @@ const Profile = () => {
   //Context
   const [userPfp, setuserPfp] = useContext(PfpContext);
   const [likedPosts, setLikedPosts] = useContext(LikedPostContext);
+  const [userInfo, setUserInfo] = useContext(NameContext);
 
   useEffect(() => {
     console.log(likedPosts)
@@ -50,6 +52,11 @@ const Profile = () => {
       return;
     }
   }
+
+  const editUserInfo = () => {
+
+  }
+  
   return (
     <>
     <Nav useLinks={false}/>
@@ -57,7 +64,7 @@ const Profile = () => {
         <div className="profile-input">
         <h1>Change profile picture</h1>
         <input className='pfp-input' type="file" onChange={(e) => {
-        const file = e.target.files[0]
+        const file = e.target.files[0];
         setUserImage(file)
         }}/>
         <br />
@@ -67,11 +74,17 @@ const Profile = () => {
         <img src={userPfp ? userPfp : (
           loadedUserImage ? loadedUserImage : PlaceholderPfp
         )} alt="" />
+
+        <h1>{userInfo.firstname + ' ' + userInfo.lastname}</h1>
+        <h2>Username: {userInfo.username}</h2>
+        <button className="btn profile-edit" onClick={() => editUserInfo}>Edit</button>
         </div>
     </div>
+
+    {/* Liked Posts */}
     <div className={hasPfp ? "alert alert-active" : "alert"}>New Profile Picture Added! <BsPatchCheckFill/></div>
 
-      { !likedPosts.length === 0 ? <div>
+      { likedPosts.length !== 0 ? <div>
       <h1 className='profile-container'>Liked Posts</h1>
       <div className="liked-posts profile-container">
       {likedPosts.map((post) => {
