@@ -9,6 +9,7 @@ import { FaRegComment } from 'react-icons/fa'
 import './Profile.css'
 import { NameContext } from '../../../context/NameContext';
 import EditPopUp from '../../EditPopUp/EditPopUp';
+import { AnimatePresence } from 'framer-motion';
 
 const Profile = () => {
     
@@ -58,11 +59,16 @@ const Profile = () => {
   const editUserInfo = () => {
     setShowEditModal(true)
   }
+  const closeModal = () => {
+    setShowEditModal(false)
+  }
 
   return (
     <>
     <Nav useLinks={false}/>
-    { showEditModal ? <EditPopUp /> : ''}
+    <AnimatePresence>
+    { showEditModal ? <EditPopUp closeModal={closeModal} /> : ''}
+    </AnimatePresence>
     <div className='profile profile-container'>
         <div className="profile-input">
         <h1>Change profile picture</h1>

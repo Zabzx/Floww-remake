@@ -1,10 +1,10 @@
-import React, { useState, useContext, useRef } from 'react';
+import React, { useState, useContext } from 'react';
 import { NameContext } from '../../context/NameContext.jsx';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ImCross } from 'react-icons/im';
 import './editpopup.css';
 
-const EditPopUp = () => {
+const EditPopUp = ({ closeModal }) => {
 
     const [changedUserInfo, setChangedUserInfo] = useState({
         firstName: "",
@@ -20,17 +20,9 @@ const EditPopUp = () => {
       setNameContext(changedUserInfo);
     }
 
-    const closeModal = () => {
-      console.log(modalRef.current)
-      modalRef.current.style.transform = 'scale(0)'
-    }
-
-    const modalRef = useRef();
-
   return (
-    <AnimatePresence>
         <div className="edit-form-container">
-        <motion.form className="edit-form" animate={{scale: 1.3}}>
+        <motion.form className="edit-form" animate={{scale: 1.3}} exit={{opacity: 0}} key="modal">
         <div className="modal-header">
             <h1>Edit</h1>
             <ImCross className="modal-icon" onClick={closeModal} />
@@ -46,7 +38,6 @@ const EditPopUp = () => {
         <button className="btn" onClick={(e) => editUserInfo(e)}>Confirm Changes</button>
         </motion.form>
         </div>
-    </AnimatePresence>
   )
 }
 
