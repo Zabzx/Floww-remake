@@ -106,13 +106,13 @@ useEffect(() => {
 
             <div className='input-item'>
                 <input type="text" name="firstname" id="firstname" className="form__input" placeholder=" " onChange={(e) => {setUserFirstName(e.target.value)
-                setNames({...names, firstname: e.target.value})}} />
+                setNames({...names, firstName: e.target.value})}} />
                 <label className="form__label" htmlFor="first_name">First Name</label>
             </div>
 
             <div className='input-item'>
                 <input type="text" name="lastname" id="last_name" className="form__input" autoComplete="off" placeholder=" " onChange={(e) => {setUserLastName(e.target.value)
-                setNames({...names, lastname: e.target.value})}} />
+                setNames({...names, lastName: e.target.value})}} />
                 <label className="form__label" htmlFor="last_name">Last Name</label>
             </div>
 
@@ -124,11 +124,11 @@ useEffect(() => {
         </form>
 
         <form action="" className={ formIndex === 1 ? `form-active form-right` : 'sign-in-form'}>
-            <h1>Floww Sign Up</h1>
+            <h1 className="form-h1">Floww Sign Up</h1>
 
             <div className='input-item'>
                 <input type="text" name="username" id="username" className="form__input" placeholder=" " onChange={(e) => {setUserUsername(e.target.value)
-                setNames({...names, username: e.target.value})}} />
+                setNames({...names, userName: e.target.value})}} />
                 <label htmlFor="username" className="form__label">Username</label>
             </div>
 

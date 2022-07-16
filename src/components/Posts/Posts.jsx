@@ -38,9 +38,9 @@ const Posts = () => {
     }
 
     if (!userPfp) {
-    setPosts([{content: value, pfp: DefaultPfp, name: names.username}, ...posts])
+    setPosts([{content: value, pfp: DefaultPfp, name: names.userName}, ...posts])
     } else {
-      setPosts([{content: value, pfp: userPfp, name: names.username}, ...posts])
+      setPosts([{content: value, pfp: userPfp, name: names.userName}, ...posts])
     }
 
     e.target.value = ''

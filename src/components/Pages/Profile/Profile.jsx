@@ -85,7 +85,7 @@ const Profile = () => {
         )} alt="" />
 
         <h1>{userInfo.firstName + ' ' + userInfo.lastName}</h1>
-        <h2>Username: {userInfo.username}</h2>
+        <h2>Username: {userInfo.userName}</h2>
         <button className="btn profile-edit" onClick={editUserInfo}>Edit</button>
         </div>
     </div>
