@@ -39,7 +39,7 @@ const EditPopUp = ({ closeModal }) => {
 
         <button className="btn" onClick={(e) => editUserInfo(e)}>Confirm Changes</button>
 
-        { successAlert ? <h3>Successfully changed user info!</h3> : ''}
+        { successAlert ? <h3 className="success-msg">Successfully changed user info!</h3> : ''}
         </motion.form>
         </div>
   )

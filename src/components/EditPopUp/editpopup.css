@@ -15,6 +15,7 @@
     font-size: 2rem;
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
 }
 
 .edit-form-container {
@@ -37,4 +38,10 @@
 
 .edit-input {
     width: 100%;
+}
+
+.success-msg {
+    color: rgb(115, 235, 115);
+    background-color: rgb(3, 43, 3);
+    padding: .5rem;
 }
